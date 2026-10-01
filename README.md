@@ -1,41 +1,52 @@
 # E-Commerce Product Management System
 
-A console-based product management system developed in C# for an Algorithm and Programming course. The project models essential product operations for a small e-commerce workflow and is designed to practice structured program flow, validation, and array-based data handling.
-
-## Snapshot
-
-| Item | Detail |
-| --- | --- |
-| Project type | Academic team project |
-| Language | C# |
-| Runtime | .NET 9.0 |
-| Interface | Console application |
-| Main capabilities | Product CRUD, search, category filtering, input validation |
+A console-based C# product-management application for an Algorithm and Programming course. It uses an in-memory array to demonstrate CRUD operations, searching, category filtering, and defensive console-input validation in a small e-commerce workflow.
 
 ## Features
 
-The console menu supports listing products, adding a product, editing a product, deleting a product, searching product records, and filtering products by category. Product data is held in an array, while console input is validated to reduce empty, negative, or non-numeric values.
+- List all products
+- Add a product
+- Edit an existing product
+- Delete a product
+- Search by product name
+- Filter by category
+- Validate empty names, numeric input, negative stock, and negative prices
+- Store up to 50 products in an array
+
+## Tech stack
+
+- C#
+- .NET 9.0
+- Console UI
+- Array-based in-memory data handling
+
+## Repository structure
+
+```text
+├── Program.cs                 # Menu, product model, CRUD, search, and validation
+├── tubesalproarray.csproj     # .NET project configuration
+├── tubesalproarray.sln        # Visual Studio solution
+└── README.md
+```
 
 ## Run locally
 
-Install the .NET 9.0 SDK, then run the project from the repository root:
+Install the .NET 9.0 SDK, then run from the repository root:
 
 ```bash
 dotnet run --project tubesalproarray.csproj
 ```
 
-## Project structure
+The interactive menu supports options 1–7: show, add, edit, delete, search, filter, and exit.
 
-| File | Purpose |
-| --- | --- |
-| `Program.cs` | Console menu, product model, CRUD logic, search, filtering, and validation. |
-| `tubesalproarray.csproj` | .NET project configuration targeting `net9.0`. |
-| `tubesalproarray.sln` | Visual Studio solution file. |
+## Design notes
+
+The project intentionally keeps data in a fixed-size array so the core exercise remains focused on fundamental control flow and data handling. Restarting the application resets the in-memory product list; there is no database or file persistence.
 
 ## Team attribution
 
-This repository is a fork of [alanabyan/fix-tubes-alpro](https://github.com/alanabyan/fix-tubes-alpro) and intentionally preserves its history and contributor attribution. The original project contributors include Alan Abyan, Faqih Alfarobahrudin, Raffata Izacky Yuargya Aletama, and Evelyne Santoso. Raffata is listed as a contributor in the original commit history.
+This repository is a fork of [alanabyan/fix-tubes-alpro](https://github.com/alanabyan/fix-tubes-alpro) and preserves the original contributor history. The original project contributors include Alan Abyan, Faqih Alfarobahrudin, Raffata Izacky Yuargya Aletama, and Evelyne Santoso.
 
-## Notes
+## Scope
 
-This is an academic console project, not a production e-commerce platform. It is published as a compact example of programming fundamentals: clean menu flow, input validation, CRUD operations, searching, and category filtering.
+This is an academic console project, not a production e-commerce platform. It is intended to demonstrate programming fundamentals rather than authentication, persistence, inventory concurrency, or payment processing.
