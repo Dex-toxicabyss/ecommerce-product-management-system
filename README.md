@@ -50,3 +50,29 @@ This repository is a fork of [alanabyan/fix-tubes-alpro](https://github.com/alan
 ## Scope
 
 This is an academic console project, not a production e-commerce platform. It is intended to demonstrate programming fundamentals rather than authentication, persistence, inventory concurrency, or payment processing.
+## Portfolio evidence
+
+### Example workflow
+
+```text
+Add product → Validate name, stock, price, and category
+→ List products → Search or filter → Edit or delete
+```
+
+### Validation focus
+
+The console flow handles empty names, invalid numeric input, negative stock, negative prices, and unavailable category choices without immediately terminating the application.
+
+## Contribution boundary
+
+This repository preserves the original fork history and contributor attribution. Do not interpret the repository-level feature list as a claim that one person authored every part of a team project; use the Git history and original assignment records when describing individual work.
+
+## Limitations
+
+- Product data is stored in a fixed-size in-memory array.
+- Data resets when the application exits.
+- No database, authentication, web interface, checkout, or payment processing is included.
+
+## Usage policy
+
+No open-source license is included. This repository is published for portfolio and academic reference; reuse should be requested from the author and original project contributors.
